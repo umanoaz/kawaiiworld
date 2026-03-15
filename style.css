@@ -7,6 +7,10 @@ body {
     color: #333333; /* Dark gray text is softer on the eyes than pure black */
     margin: 0; /* Removes default browser spacing around the edges */
     padding: 0;
+    /* Make the body a flex container to push the footer down */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height of 100% of the viewport height */
 }
 
 /* Target the top header area */
@@ -21,4 +25,84 @@ header {
 header h1 {
     color: white;
     margin-top: 0;
+}
+
+/* Make the main content area expand to fill available space */
+main {
+    flex: 1;
+}
+
+/* --- Navigation Menu Styling --- */
+
+/* Target the navigation menu's unordered list */
+nav ul {
+    list-style-type: none; /* This removes the bullet points */
+    padding: 0; /* Removes the default indentation */
+    margin-top: 10px; /* Adds a little space below the main title */
+}
+
+/* Target each list item in the navigation */
+nav li {
+    display: inline-block; /* This makes the list items sit side-by-side */
+    margin: 0 15px; /* Adds horizontal space between each link */
+}
+
+/* Target the actual links inside the navigation */
+nav a {
+    text-decoration: none; /* This removes the underline from links */
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em; /* Makes the font slightly larger */
+}
+
+/* --- Featured Products Section --- */
+
+#featured {
+    padding: 40px 20px; /* Add vertical and horizontal padding */
+    text-align: center;
+}
+
+.product-grid {
+    display: flex; /* This is the key to making items sit side-by-side */
+    justify-content: center; /* Center the items in the container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on small screens */
+    gap: 30px; /* Adds space between the grid items */
+    margin-top: 20px;
+}
+
+.product-item {
+    background-color: white;
+    border: 2px solid #ffc0cb; /* A soft pink border */
+    border-radius: 15px; /* Rounded corners for a cute look */
+    padding: 20px;
+    width: 250px; /* A fixed width for each product card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* A subtle shadow for a "floating" effect */
+}
+
+/* Target the image inside the product item */
+.product-item img {
+    max-width: 100%; /* Ensures the image never overflows its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 10px; /* Slightly rounded corners for the image */
+}
+
+/* Target the product title (h3) */
+.product-item h3 {
+    font-size: 1.2em; /* You can make this value smaller or larger */
+    margin: 15px 0 10px;
+}
+
+/* Target the product price (p) */
+.product-item p {
+    font-size: 1.1em; /* You can also adjust this font size */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #ffb6c1; /* Soft pink background matching the header base */
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
 }
