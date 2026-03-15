@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
 /* This is a CSS comment! The browser ignores this text. */
 
 /* Target the entire visible page */
 body {
     background-color: #fff0f5; /* This is the hex code for 'Lavender Blush', a soft pastel pink */
-    font-family: Arial, sans-serif; /* Changes the default font */
+    font-family: 'Nunito', sans-serif; /* A cute, rounded, and readable font */
     color: #333333; /* Dark gray text is softer on the eyes than pure black */
     margin: 0; /* Removes default browser spacing around the edges */
     padding: 0;
     /* Make the body a flex container to push the footer down */
+    position: relative; /* Context for decorative bows */
+    overflow-x: hidden; /* Prevent horizontal scroll from bows */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Minimum height of 100% of the viewport height */
@@ -30,6 +34,12 @@ header h1 {
 /* Make the main content area expand to fill available space */
 main {
     flex: 1;
+}
+
+/* Ensure main content is on top of background decorations */
+header, main, footer {
+    position: relative;
+    z-index: 1;
 }
 
 /* --- Navigation Menu Styling --- */
@@ -105,4 +115,118 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: auto;
+}
+
+/* --- Page Content Styling --- */
+#about-me {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about-me p {
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/* --- Background Decorations --- */
+.background-decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* This is the magic rule that clips the bottom bows and prevents scrolling */
+    pointer-events: none; /* This ensures you can still click links even if a bow overlaps them */
+}
+
+.decorative-bow {
+    position: absolute; /* Allows us to place the bows anywhere in the section */
+    width: 160px; /* Doubled the size */
+    height: auto;
+    z-index: 0; /* Places the bows behind the main content */
+}
+
+/* Position each bow individually */
+.decorative-bow:nth-of-type(1) {
+    top: 80px;
+    left: 3%; /* Pushed to the far left margin */
+    transform: rotate(-25deg);
+}
+
+.decorative-bow:nth-of-type(2) {
+    top: 250px;
+    right: 4%; /* Pushed to the far right margin */
+    transform: rotate(15deg);
+    width: 120px;
+}
+
+.decorative-bow:nth-of-type(3) {
+    top: 450px;
+    left: 6%;
+    width: 100px; 
+    transform: rotate(30deg);
+}
+
+.decorative-bow:nth-of-type(4) {
+    top: 600px;
+    right: 2%;
+    width: 120px;
+    transform: rotate(20deg);
+}
+
+.decorative-bow:nth-of-type(5) {
+    top: 800px;
+    left: 5%;
+    width: 90px;
+    transform: rotate(-40deg);
+}
+
+.decorative-bow:nth-of-type(6) {
+    top: 950px;
+    right: 7%;
+    width: 140px;
+    transform: rotate(5deg);
+}
+
+.decorative-bow:nth-of-type(7) {
+    top: 1150px;
+    left: 2%;
+    width: 180px;
+    transform: rotate(-15deg);
+}
+
+.decorative-bow:nth-of-type(8) {
+    top: 1300px;
+    right: 5%;
+    width: 110px;
+    transform: rotate(25deg);
+}
+
+.decorative-bow:nth-of-type(9) {
+    top: 1500px;
+    left: 8%;
+    width: 130px;
+    transform: rotate(-10deg);
+}
+
+.decorative-bow:nth-of-type(10) {
+    top: 1650px;
+    right: 3%;
+    width: 150px;
+    transform: rotate(35deg);
+}
+
+.decorative-bow:nth-of-type(11) {
+    top: 1850px;
+    left: 4%;
+    width: 100px;
+    transform: rotate(-20deg);
+}
+
+.decorative-bow:nth-of-type(12) {
+    top: 2000px;
+    right: 6%;
+    width: 170px;
+    transform: rotate(10deg);
 }
