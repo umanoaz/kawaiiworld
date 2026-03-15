@@ -1,0 +1,24 @@
+/* This is a CSS comment! The browser ignores this text. */
+
+/* Target the entire visible page */
+body {
+    background-color: #fff0f5; /* This is the hex code for 'Lavender Blush', a soft pastel pink */
+    font-family: Arial, sans-serif; /* Changes the default font */
+    color: #333333; /* Dark gray text is softer on the eyes than pure black */
+    margin: 0; /* Removes default browser spacing around the edges */
+    padding: 0;
+}
+
+/* Target the top header area */
+header {
+    background: radial-gradient(circle, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb, #ffb6c1); /* Pastel Tie-Dye Effect */
+    padding: 20px;
+    text-align: center; /* Centers all text inside the header */
+    border-bottom: 3px solid #ff69b4; /* Adds a hot pink line under the header */
+}
+
+/* Target the main heading inside the header */
+header h1 {
+    color: white;
+    margin-top: 0;
+}
