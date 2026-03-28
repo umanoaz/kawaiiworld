@@ -1,0 +1,2 @@
+# Security: Ignore secret tokens and credentials to prevent repository leaks
+token.txt
